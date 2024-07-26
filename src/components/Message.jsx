@@ -16,7 +16,7 @@ const Message = ({ message, setMessage, messages, setMessages }) => {
     useEffect(() => {
 
         //si abri el puerto 8080
-        socketRef.current = io('http://3.145.17.236:8080' || 'https://3.145.17.236:8080');
+        socketRef.current = io('https://3.145.17.236:8080');
 
         socketRef.current.on('message', (newMessage) => {
             const { msg } = newMessage;
