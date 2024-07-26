@@ -26,9 +26,7 @@ const Chat = () => {
         setIsActive(!isActive)
     }
 
-    useEffect(() => {
-        handleLocation()
-    }, [])
+
 
     const handleOpen = () => {
         setIsActive(!isActive)
@@ -44,8 +42,7 @@ const Chat = () => {
                 })
             });
             setGetGeolocation(true)
-            console.log('--->' ,location.latitude, location.longitude)
-
+           
 
         } else {
             alert("Geolocation is not supported by this browser.");
@@ -80,8 +77,7 @@ const Chat = () => {
 
                 <h3 className='title-geolocalization'>
                     {
-                        location.latitude && location.longitude ? `Latitud: ${location.latitude} Longitud: ${location.longitude}` : 'Ubicación'
-
+                        location.latitude && location.longitude ? `Latitud: ${location.latitude} Longitud: ${location.longitude}` : 'Da click para obtener tu ubicación'
                     }
                 </h3>
 
