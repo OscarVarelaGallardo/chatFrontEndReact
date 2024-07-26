@@ -12,7 +12,7 @@ const Message = ({ message, setMessage, messages, setMessages }) => {
     const [loading, setLoading] = useState(false);
     const socketRef = useRef(null);
 
-    
+
     useEffect(() => {
 
         //si abri el puerto 8080
